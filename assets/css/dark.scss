@@ -1,0 +1,502 @@
+/*================================================
+Default CSS
+=================================================*/
+$main-color: #fa5f0b;
+$black-color: #000000;
+$white-color:#ffffff;
+// Switch css
+.switch-box {
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 265px;
+    transform: translateY(-50%);
+    background-color: #67696b;
+    height: 45px;
+    width: 50px;
+    padding-top: 5px;
+    padding-left: 10px;
+    border-radius: 30px 0 0 30px;
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #cecbcb;
+        transition: 0.4s;
+
+        &:before {
+            position: absolute;
+            content: "\ec34";
+            font-family: 'boxicons'!important;
+            color: $black-color;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            top: 0;
+            left: 6px;
+            transition: 0.4s;
+        }
+    }
+    input:checked + .slider {
+        background-color: #cecbcb;
+    }
+    input:focus + .slider {
+        background-color: #cecbcb;
+    }
+    input:checked + .slider:before {
+        content: '\eb94';
+    }
+    .slider {
+        &.round {
+            border-radius: 50px;
+
+            &:before {
+                border-radius: 50%;
+            } 
+        }
+    }
+}
+
+// Dark Style CSS
+.theme-dark {
+    body {
+        background-color: #000000;
+        color: #f1f1f1;
+    }
+    p {
+        color: #f1f1f1;
+        
+        a {
+            color: #f1f1f1 !important;
+        }
+    }
+    a {
+        color: $white-color;
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        color: $white-color !important;
+
+        a {
+            color: $white-color !important;
+        }
+    }
+
+    //Modal 
+    .modal {
+        &.modal-right {
+            .modal-content {
+                background-color: #0e0e0e;
+            }
+        }
+    }
+    .btn-close {
+       background-color: $white-color;
+    }
+    //Navbar
+    .nav-area-two {
+        .main-nav {
+            background-color: transparent !important;
+            .navbar-light {
+                background-color: #232222;
+                &:before {
+                    border-top: 84px solid #0e0e0e;
+                }
+            }
+        }
+    }
+    .side-nav-two {
+        .modal-btn {
+            span {
+                background-color: $white-color;
+                &:hover {
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+    .search-icon {
+        color: $white-color;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    .navbar-area {
+        .main-nav {
+            background-color: #232323;
+            &:before {
+                border-top: 90px solid #0e0e0e;
+            }
+            &.menu-shrink {
+                &:before {
+                    border-top: 80px solid #0e0e0e;
+                }
+            }
+        }
+    }
+    .side-nav {
+        a {
+            color: $black-color;
+            &:hover {
+                color: $white-color;
+            }
+        }
+    }
+    .cmn-btn {
+        color: #fa5f0b;
+    }
+    .navbar-light .navbar-brand {
+        .white-logo {
+            display: block;
+        }
+        .main-logo {
+            display: none;
+        }
+    }
+    .header-contact-area {
+        .logo {
+            .white-logo {
+                display: block;
+            }
+            .main-logo {
+                display: none;
+            }
+        }
+    }
+
+    //About
+    .about-area {
+        .about-content {
+            p {
+                color: $white-color;
+            }
+            img {
+                &:last-child {
+                    filter: invert(1);
+                }
+            }
+        }
+        .about-img-wrap {
+            .about-year {
+                background-color: #0e0e0e;
+                h2 {
+                    color: $white-color;
+                    span {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    //Benefits
+    .benefit-area-three {
+        .benefit-content {
+            background-color: $black-color;
+        }
+    }
+    .benefit-area-two {
+        .benefit-content {
+            p {
+                color: $white-color;
+            }
+        }
+    }
+
+    //Offer
+    .offer-area-two {
+        background-color: $black-color;
+        .offer-item {
+            background-color: #0e0e0e;
+            box-shadow: unset;
+        }
+    }
+    .offer-area {
+        background-color: #0e0e0e;
+    }
+    .offer-item {
+        background-color: $black-color;
+    }
+
+    //Job
+    .job-area-two {
+        background-color: #0e0e0e;
+        .job-content {
+            p {
+                color: $white-color;
+            }
+            ul {
+                li {
+                    background-color: $black-color;
+                }
+            }
+        }
+    }
+
+    //logo
+    .logo-area-two {
+        background-color: $black-color;
+    }
+    .logo-area {
+        background-color: #0e0e0e;
+    }
+
+    //services
+    .service-item {
+        background-color: $black-color;
+    }
+    .service-area-three {
+        background-color: #0e0e0e;
+    }
+    .service-details-area {
+        .service-details-item {
+            .service-details-cat {
+                ul {
+                    li {
+                        background-color: #0e0e0e;
+                        a {
+                            color: $white-color;
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .service-details-form {
+                .form-group {
+                    .form-control {
+                        background-color: #0e0e0e;
+                        border: 1px solid #787777;
+                        color: $white-color;
+                        &::placeholder {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Foreing
+    .foreign-item {
+        box-shadow: unset;
+        background-color: #0e0e0e;
+    }
+
+    //Team
+    .team-item {
+        background-color: #0e0e0e;
+    }
+    .team-area-two {
+        background-color: #0e0e0e;
+    }
+
+    //Partner
+    .partner-area {
+        .partner-wrap {
+            background-color: #191919;
+        }
+    }
+
+    //Cost Area
+    .cost-area {
+        .cost-content {
+            background-color: $black-color;
+            ul {
+                li {
+                    span {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    //Blog {
+    .blog-item {
+        .blog-inner {
+            background-color: #0e0e0e;
+        }
+    }
+    .blog-details-item {
+        .blog-details-name {
+            .details-item {
+                ul {
+                    li {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        .blog-details-post {
+            ul {
+                li {
+                    .post-inner {
+                        a {
+                            color: $white-color;
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .blog-details-quote {
+            blockquote {
+                background-color: #0e0e0e;
+                color: $white-color;
+            }
+        }
+        .blog-details-robot {
+            a {
+                color: $white-color;
+                background-color: $black-color;
+            }
+        }
+        .blog-details-search {
+            .form-group {
+                .form-control {
+                    border: 1px solid #8c8b8b;
+                    background-color: #0e0e0e;
+                    color: $white-color;
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .blog-details-area {
+        .blog-details-form {
+            background-color: #0e0e0e;
+            .form-group {
+                .form-control {
+                    background-color: $black-color;
+                    color: $white-color;
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    //Book
+    .book-area {
+        .row {
+            background-color: #242423;
+        }
+        .book-content {
+            &:before {
+                border-top: 224px solid #242423;
+                border-right: 309px solid transparent;
+            }
+        }
+    }
+
+    //Faq
+    .faq-area {
+        .accordion {
+            a {
+                color: $white-color;
+                border-radius: 8px 8px 0 0;
+            }
+        }
+    }
+
+    //Coming Soon
+    .coming-item {
+        .coming-wrap {
+            .coming-inner {
+                background-color: #0e0e0e;
+            }
+        }
+    
+    }
+
+    //Project
+    .project-details-item {
+        .project-details-img {
+            ul {
+                li {
+                    color: $white-color;
+                }
+            }
+        }
+        .project-details-mec {
+            ul {
+                li {
+                    a {
+                        color: $white-color;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .project-details-form {
+            .form-group {
+                .form-control {
+                    background-color: #0e0e0e;
+                    color: $white-color;
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    //Contact
+    .contact-area {
+        .contact-left {
+            ul {
+                li {
+                    color: $white-color;
+                    border-bottom: 1px solid #908e8e69;
+                    a {
+                        color: $white-color;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                    i {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        .form-group {
+            .form-control {
+                border: 1px solid #6a4c3c;
+                background-color: #0e0e0e;
+                color: $white-color;
+                &::placeholder {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+
+
+}
